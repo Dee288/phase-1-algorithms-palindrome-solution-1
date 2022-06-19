@@ -1,11 +1,21 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+ const reverseWord = reverseStr(word);
+ if (word === reverseWord) {
+  return true;
+} else {
+  return false;
 }
+}
+function reverseStr(word) {
+  return word.split("").reverse().join("");
+}
+  
+
+
+
 
 /* 
-  Add your pseudocode here
-*/
-
+  Add your pseudocode h
 /*
   Add written explanation of your solution here
 */
@@ -21,5 +31,6 @@ if (require.main === module) {
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
 }
+console.log(" ")
 
 module.exports = isPalindrome;
